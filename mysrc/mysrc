@@ -1,0 +1,17 @@
+HISTTIMEFORMAT="%Y-%m-%d %T "
+
+alias kctl='microk8s kubectl'
+alias mk='microk8s'
+alias nets='netstat -tulpn | grep LISTEN'
+alias kpo='microk8s kubectl get po'
+alias kno='microk8s kubectl get nodes'
+alias kns='microk8s kubectl get namespace'
+alias ksvc='microk8s kubectl get svc'
+alias kdep='microk8s kubectl get deployments'
+alias krep='microk8s kubectl get replicasets'
+alias kpv='microk8s kubectl get pv'
+alias kpvc='microk8s kubectl get pvc'
+alias king='microk8s kubectl get ingress'
+alias kdsp='microk8s kubectl describe pod'
+alias kdsd='microk8s kubectl describe deployment'
+alias kdss='microk8s kubectl describe service'

@@ -1,0 +1,23 @@
+---
+- name: Find out system parameters
+  hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: "get_user"
+      prompt: "Enter a SVC user name"
+      private: no
+  tasks:
+
+    - name: Run the ibm commands..
+      command: "ssh {{ get_user }}@10.x.x.x {{ item }}"
+      with_items:
+        - lshost
+        - lsiogrp
+      register: output
+    - debug:
+        var: output
+
+    - name: save the output..
+      copy:
+        content: "{{ output }}"
+        dest: "/root/ibm_v7000/ibm_v7000.txt"

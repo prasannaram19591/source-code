@@ -1,0 +1,25 @@
+---
+- name: Find out ceph storage usage by device
+  hosts: ceph_nodes
+  gather_facts: yes
+  tasks:
+
+    - name: Create a directory
+      file:
+        path: /ceph_ver
+        state: directory
+
+    - name: Copy the python script to all ceph nodes
+      copy:
+        src: /root/automation_projects/ansible-playbooks/ceph/ceph_df_by_device.py
+        dest: /ceph_ver
+        mode: 0755
+
+    - name: Run the ceph df script
+      shell: cd /ceph_ver; python ceph_df_by_device.py > {{ inventory_hostname }}
+
+    - name: Copy the version output from remote to local
+      fetch:
+        src: /ceph_ver/{{ inventory_hostname }}
+        dest: /root/automation_projects/ansible-playbooks/ceph/{{ inventory_hostname }}
+        flat: yes 

@@ -1,0 +1,25 @@
+---
+- name: Find the bonding interface status
+  hosts: openstack_nodes
+  gather_facts: yes
+  
+  tasks:
+    - name: Create a directory
+      file:
+        path: /bonding_details
+        state: directory
+
+    - name: Copy the script file to nodes
+      copy:
+        src: /dir1/dir2/bonding_details.sh
+        dest: /bonding_details 
+        mode: 0755
+
+    - name: Run the bonding script
+      command: /bonding_details/bonding_details.sh
+
+    - name: Copy the bonding detail output from remote to local
+      fetch:
+        src: /bonding_details/{{ ansible_hostname }}.txt
+        dest: /dir1/bonding_details/{{ ansible_hostname }}
+        flat: yes

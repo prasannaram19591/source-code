@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  remote_user: user
+  tasks:
+     - name: list hosts
+       command: ssh user@10.174.86.132
+       register: output
+     - debug:
+         msg: "command {{ output.stdout }}"

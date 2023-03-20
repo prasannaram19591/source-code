@@ -1,0 +1,15 @@
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+        - name: "get_user"
+          prompt: "Enter a SVC user name"
+          private: no
+  tasks:
+     - name: ssh
+       command: "ssh {{ get_user }}@10.x.x.x lshost"
+       register: output
+     - debug: var=output
+     - name: save the output
+       copy:
+         content: "{{ output }}"
+         dest: "/root/output.txt"

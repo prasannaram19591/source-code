@@ -1,0 +1,28 @@
+---
+- name: Find out the version of Linux based on ansible os distro..
+  hosts: lin-nodes
+  gather_facts: yes
+  tasks:
+
+    - name: Create a directory on remote node..
+      file:
+        path: /version_info
+        state: directory
+
+    - name: Copy the version finder script based on ansible os distro..
+      copy:
+        src: /root/linux/{{ ansible_distribution }}.sh
+        dest: /version_info
+        mode: 0755
+
+    - name: Run the version info checker script on remote node..
+      shell: "./{{ ansible_distribution }}.sh"
+      args:
+        chdir: /version_info
+
+    - name: Copy the version info from remote node..
+      fetch:
+        src: /version_info/version_info.txt
+        dest: /root/linux/{{ ansible_hostname }}.txt
+        flat: yes
+

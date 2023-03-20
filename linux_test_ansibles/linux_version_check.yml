@@ -1,0 +1,22 @@
+---
+- name: Check ubuntu version
+  hosts: lin
+  gather_facts: no
+  tasks:
+
+    - name: Run version command on nodes..
+      shell: lsb_release -a
+      register: output
+    - debug:
+        var: output
+
+    - name: Save the output on remote machine..
+      copy:
+        content: "{{ output }}"
+        dest: "/root/ansible-playbooks/output.txt"
+
+    - name: Fetch the output from remote to local machine..
+      fetch:
+        src: /root/ansible-playbooks/output.txt
+        dest: /root/ansible-playbooks/output.txt
+        flat: yes

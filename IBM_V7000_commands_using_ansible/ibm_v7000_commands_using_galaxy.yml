@@ -1,0 +1,29 @@
+---
+- name: Using the IBM Spectrum Virtualize collection
+  collections:
+    - ibm.spectrum_virtualize
+  gather_facts: no
+  connection: local
+  hosts: localhost
+  vars:    
+    - clustername: 10.x.x.x
+    - domain: 
+    - username: username
+    - password: password
+
+  tasks:
+    - name: Run CLI commands on V7000..
+      #ibm_svcinfo_command:
+      ibm_svc_info:
+        command: "svcinfo lssystem"
+        clustername: "{{ clustername }}"
+        domain: "{{ domain }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        log_path: /root/ibm_v7000/logs.debug
+        state: present
+
+      register: output
+    - debug:
+        var: output.stdout_lines
+         

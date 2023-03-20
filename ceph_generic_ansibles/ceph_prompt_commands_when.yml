@@ -1,0 +1,33 @@
+---
+- name: Find out the Ceph version
+  hosts: ceph_nodes
+  gather_facts: yes
+  
+  vars_prompt:
+
+    - name: command
+      prompt: Please enter a ceph command to run on all nodes..
+      private: no
+
+  tasks:
+
+    - name: Register a variable
+      shell: cat /remote_dir/test.txt
+      register: content
+
+    - name: Create a directory
+      file:
+        path: /ceph_hc
+        state: directory
+      when: content.stdout.find('ansible') != -1
+      
+    - name: Run the version check command
+      shell: "{{ command }} > /ceph_hc/{{ inventory_hostname }}"
+      when: content.stdout.find('ansible') != -1
+
+    - name: Copy the version output from remote to local
+      fetch:
+        src: /ceph_hc/{{ inventory_hostname }}
+        dest: /root/automation_projects/ansible-playbooks/ceph/{{ inventory_hostname }}
+        flat: yes 
+      when: content.stdout.find('ansible') != -1
