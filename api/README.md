@@ -12,8 +12,8 @@ This is an API endpoint for managing Docker containers.
 
 To use this API, you can send HTTP requests to the following endpoints:
 
-1.	POST /start-container: Start a Docker container. Pass the NAME of the container to start as a string parameter.
-2.	PUT /stop-container: Stop a running Docker container. Pass the NAME of the container to stop as a string parameter.
+1.	POST /start-container: Start a Docker container. Pass the id/name of the container to start as a string parameter.
+2.	PUT /stop-container: Stop a running Docker container. Pass the id/name of the container to stop as a string parameter.
 
 ## Running the API
 To run the API, follow these steps:
