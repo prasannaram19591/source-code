@@ -34,10 +34,11 @@ To run the API, follow these steps:
 	Restart=always
 	
 	[Install]
-	WantedBy=multi-user.target```
+	WantedBy=multi-user.target
+ ```
 5.	Note that the name of the python file should be passed in the uvicorn command in ExecStart line of service file.
 6.	Start and enable the service `systemctl enable --now openapi.service`.
-7.	Check is the service is running `systemctl status openapi.service`.
+7.	Check if the service is running `systemctl status openapi.service`.
 8.	Once the service is running open your browser and paste the url `http:<server_ip>:4000/docs` to view the builtin swagger UI for testing purposes.
 9.	Expand any one api end point and click on `Try it out`.
 10.	Input a container id in the text box and click on execute.
