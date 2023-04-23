@@ -22,7 +22,8 @@ To run the API, follow these steps:
 2.	Install openapi and uvicorn server pip packages. `pip3 install fastapi uvicorn`.
 3.	In order to constantly reflect the code changes write a service file in your linux under `/etc/systemd/system/`.
 4.	Name the service any name like `openapi.service` and write the following contents.
-	```[Unit]
+	```
+	[Unit]
 	Description=API Service
 	After=network.target
 	
