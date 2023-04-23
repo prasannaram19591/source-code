@@ -13,7 +13,7 @@ def start_container(NAME: str):
         return {"status": "error", "message": f"Failed to start container {NAME}: {e.output.decode()}"}
 
 @app.put("/stop-container")
-def start_container(NAME: str):
+def stop_container(NAME: str):
     try:
         docker_cmd = ["docker", "stop", NAME]
         subprocess.run(docker_cmd, check=True)
