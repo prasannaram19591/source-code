@@ -18,7 +18,7 @@ To use this API, you can send HTTP requests to the following endpoints:
 ## Running the API
 To run the API, follow these steps:
 
-1.	Clone this repository to your local machine. `git clone https://github.com/prasannaram19591/source-code.git`
+1.	Clone this repository to your local machine. `git clone https://github.com/prasannaram19591/source-code.git` and move to the api directory `cd api`
 2.	Install openapi and uvicorn server pip packages. `pip3 install fastapi uvicorn`
 3.	In order to constantly reflect the code changes write a service file in your liniux under `/etc/systemd/system/`
 4.	Name the service any name like openapi.service and write the following contents.
