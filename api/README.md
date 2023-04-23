@@ -1,6 +1,6 @@
 # Container API service
 
-This is an API endpoint for managing Docker containers.
+This is an API endpoint built using openapi for managing Docker containers.
 
 ## Pre-requisites
 
@@ -22,7 +22,7 @@ To run the API, follow these steps:
 2.	Install openapi and uvicorn server pip packages. `pip3 install fastapi uvicorn`
 3.	In order to constantly reflect the code changes write a service file in your liniux under `/etc/systemd/system/`
 4.	Name the service any name like openapi.service and write the following contents.
-	`[Unit]
+	```[Unit]
 	Description=API Service
 	After=network.target
 	
@@ -33,7 +33,7 @@ To run the API, follow these steps:
 	Restart=always
 	
 	[Install]
-	WantedBy=multi-user.target`
+	WantedBy=multi-user.target```
 5.	Note that the name of the python file should be passed in the uvicorn command in ExecStart line of service file.
 6.	Start and enable the service. `systemctl enable --now openapi.service`
 7.	Check is the service is running `systemctl status openapi.service`
