@@ -22,18 +22,18 @@ To run the API, follow these steps:
 2.	Install openapi and uvicorn server pip packages. `pip3 install fastapi uvicorn`
 3.	In order to constantly reflect the code changes write a service file in your liniux under `/etc/systemd/system/`
 4.	Name the service any name like openapi.service and write the following contents.
-	`[Unit]`
-	`Description=API Service`
-	`After=network.target`
+	`[Unit]
+	Description=API Service
+	After=network.target
 	
-	`[Service]`
-	`User=root`
-	`WorkingDirectory=/root/source-code/api`
-	`ExecStart=/usr/bin/python3 -m uvicorn portainer:app --reload --host 0.0.0.0 --port 4000`
-	`Restart=always`
+	[Service]
+	User=root
+	WorkingDirectory=/root/source-code/api
+	ExecStart=/usr/bin/python3 -m uvicorn portainer:app --reload --host 0.0.0.0 --port 4000
+	Restart=always
 	
-	`[Install]`
-	`WantedBy=multi-user.target`
+	[Install]
+	WantedBy=multi-user.target`
 5.	Note that the name of the python file should be passed in the uvicorn command in ExecStart line of service file.
 6.	Start and enable the service. `systemctl enable --now openapi.service`
 7.	Check is the service is running `systemctl status openapi.service`
