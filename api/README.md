@@ -34,7 +34,8 @@ To run the API, follow these steps:
 	Restart=always
 	
 	[Install]
-	WantedBy=multi-user.target```
+	WantedBy=multi-user.target
+	```
         
 5.	Note that the name of the python file should be passed in the uvicorn command in ExecStart line of service file.
 6.	Start and enable the service `systemctl enable --now openapi.service`.
