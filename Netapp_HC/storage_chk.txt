@@ -1,0 +1,13 @@
+SAS-connect       ok
+Environment       ok
+Memory            ok
+Service-Processor ok
+Switch-Health     ok
+CIFS-NDO          ok
+Motherboard       ok
+IO                ok
+MetroCluster      ok
+MetroCluster_Node ok
+FHM-Switch        ok
+FHM-Bridge        ok
+SAS-connect_Cluster not_ok
