@@ -10,19 +10,14 @@ systemctl enable --now docker
 dnf install conntrack -y
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
-kubectl version
 sudo mv ./kubectl /usr/local/bin/kubectl
-kubectl version
 cp /usr/local/bin/kubectl /usr/local/sbin/kubectl
 kubectl version
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 chmod +x minikube
 mkdir -p /usr/local/bin/
 install minikube /usr/local/bin/
-minikube version
-ls
 cp minikube /usr/local/sbin
-minikube version
 rm -f minikube 
 minikube version
 yum install -y git
@@ -38,6 +33,7 @@ mkdir -p /usr/local/bin
 install -o root -g root -m 0755 bin/cri-dockerd /usr/local/bin/cri-dockerd
 cp -a packaging/systemd/* /etc/systemd/system
 sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
+cp /usr/local/bin/cri-dockerd /usr/local/sbin/cri-dockerd
 systemctl daemon-reload
 systemctl enable --now cri-docker.socket
 systemctl is-active cri-docker.socket
