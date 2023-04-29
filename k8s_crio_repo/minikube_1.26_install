@@ -1,0 +1,61 @@
+yum update -y
+systemctl stop firewalld
+systemctl disable firewalld
+yum install epel-release
+setenforce 0
+sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf install docker-ce --nobest -y
+systemctl start docker
+systemctl enable docker
+dnf install conntrack -y
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+kubectl version
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version
+cp /usr/local/bin/kubectl /usr/local/sbin/kubectl
+kubectl version
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube
+mkdir -p /usr/local/bin/
+install minikube /usr/local/bin/
+minikube version
+ls
+cp minikube /usr/local/sbin
+minikube version
+rm -f minikube 
+minikube version
+yum install -y git
+git clone https://github.com/Mirantis/cri-dockerd.git
+wget https://storage.googleapis.com/golang/getgo/installer_linux
+chmod +x ./installer_linux
+./installer_linux
+source /root/.bash_profile
+cd cri-dockerd
+mkdir bin
+go build -o bin/cri-dockerd
+mkdir -p /usr/local/bin
+install -o root -g root -m 0755 bin/cri-dockerd /usr/local/bin/cri-dockerd
+cp -a packaging/systemd/* /etc/systemd/system
+sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
+systemctl daemon-reload
+systemctl enable --now cri-docker.socket
+systemctl status cri-docker.socket
+git clone https://github.com/prasannaram19591/source-code.git
+cd source-code/
+cd k8s_crio_repo/
+cp * /etc/yum.repos.d/
+yum install cri-o cri-tools -y
+systemctl enable --now crio
+systemctl status crio
+cp /usr/local/bin/cri-dockerd .
+minikube start 
+minikube status
+kubectl cluster-info
+kubectl get nodes
+systemctl enable kubelet
+systemctl is-active docker crio kubelet cri-docker
+kubectl taint nodes $(hostname) node.kubernetes.io/not-ready-
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
