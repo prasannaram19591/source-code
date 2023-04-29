@@ -1,7 +1,7 @@
 yum update -y
 systemctl stop firewalld
 systemctl disable firewalld
-yum install epel-release
+yum install epel-release -y
 setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
@@ -41,14 +41,14 @@ cp -a packaging/systemd/* /etc/systemd/system
 sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
 systemctl daemon-reload
 systemctl enable --now cri-docker.socket
-systemctl status cri-docker.socket
+systemctl is-active cri-docker.socket
 git clone https://github.com/prasannaram19591/source-code.git
 cd source-code/
 cd k8s_crio_repo/
 cp * /etc/yum.repos.d/
 yum install cri-o cri-tools -y
 systemctl enable --now crio
-systemctl status crio
+systemctl is-enabled crio
 cp /usr/local/bin/cri-dockerd .
 minikube start 
 minikube status
