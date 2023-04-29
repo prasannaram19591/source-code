@@ -6,8 +6,7 @@ setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 dnf install docker-ce --nobest -y
-systemctl start docker
-systemctl enable docker
+systemctl enable --now docker
 dnf install conntrack -y
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
@@ -50,11 +49,11 @@ yum install cri-o cri-tools -y
 systemctl enable --now crio
 systemctl is-enabled crio
 cp /usr/local/bin/cri-dockerd .
-minikube start 
+minikube start --driver=none
 minikube status
 kubectl cluster-info
 kubectl get nodes
-systemctl enable kubelet
+systemctl enable --now kubelet
 systemctl is-active docker crio kubelet cri-docker
 kubectl taint nodes $(hostname) node.kubernetes.io/not-ready-
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
