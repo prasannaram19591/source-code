@@ -1,3 +1,4 @@
+cd
 yum update -y
 systemctl stop firewalld
 systemctl disable firewalld
@@ -37,12 +38,12 @@ systemctl daemon-reload
 systemctl enable --now cri-docker.socket
 systemctl is-active cri-docker.socket
 git clone https://github.com/prasannaram19591/source-code.git
-cd source-code/
-cd k8s_crio_repo/
-cp * /etc/yum.repos.d/
+cd /root/source-code/k8s_crio_repo/
+cp *.repo /etc/yum.repos.d/
 yum install cri-o cri-tools -y
 systemctl enable --now crio
 systemctl is-enabled crio
+cd
 cp /usr/local/bin/cri-dockerd .
 minikube start --driver=none
 minikube status
@@ -52,4 +53,3 @@ systemctl enable --now kubelet
 systemctl is-active docker crio kubelet cri-docker
 kubectl taint nodes $(hostname) node.kubernetes.io/not-ready-
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
-
