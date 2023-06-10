@@ -39,7 +39,7 @@ systemctl enable --now cri-docker.socket
 systemctl is-active cri-docker.socket
 cd
 git clone https://github.com/prasannaram19591/source-code.git
-cd /root/source-code/minikube_1.26/
+cd /root/source-code/minikube/
 cp *.repo /etc/yum.repos.d/
 yum install cri-o cri-tools -y
 systemctl enable --now crio
