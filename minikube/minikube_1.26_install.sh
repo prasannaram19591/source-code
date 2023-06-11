@@ -1,5 +1,5 @@
 cd
-yum update -y
+#yum update -y
 swapoff -a
 systemctl stop firewalld
 systemctl disable firewalld
