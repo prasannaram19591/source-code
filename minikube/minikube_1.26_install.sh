@@ -10,7 +10,8 @@ dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce
 dnf install docker-ce --nobest -y
 systemctl enable --now docker
 dnf install conntrack -y
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+#curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.26.0/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
 cp /usr/local/bin/kubectl /usr/local/sbin/kubectl
@@ -45,13 +46,14 @@ yum install cri-o cri-tools -y
 systemctl enable --now crio
 systemctl is-enabled crio
 cd
+rm -rf cri-dockerd
 \cp /usr/local/bin/cri-dockerd .
+systemctl enable --now kubelet cri-docker
+systemctl is-active docker crio kubelet cri-docker
+systemctl is-enabled docker crio kubelet cri-docker
 minikube start --driver=none
 minikube status
 kubectl cluster-info
 kubectl get nodes
-systemctl enable --now kubelet cri-docker
-systemctl is-active docker crio kubelet cri-docker
-systemctl is-enabled docker crio kubelet cri-docker
 kubectl taint nodes $(hostname) node.kubernetes.io/not-ready-
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
