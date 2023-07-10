@@ -48,7 +48,7 @@ _1. Clone the repository:_
 ```shell
 git clone https://github.com/prasannaram19591/source-code.git
 ```
-Navigate to the project directory:
+*_2. Navigate to the project directory:_*
 `cd repository-name`
 Follow the instructions in the respective script or project's documentation to set up any dependencies or requirements.
 Execute the script or deploy the project as per your specific use case.
