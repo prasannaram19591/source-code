@@ -57,7 +57,9 @@ _3. Follow the instructions in the respective script or project's documentation 
 _4. Execute the script or deploy the project as per your specific use case_
 ## Contributing
 Contributions are always welcome! If you would like to contribute to this repository, please follow these steps:
+
 _1. Fork the repository_
+
 _2. Create a new branch for your feature or bug fix_
 ```shell
 git checkout -b my-feature
