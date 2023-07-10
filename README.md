@@ -12,6 +12,12 @@ Feel free to explore the contents of this repository and leverage the automation
 | Project Name | Status
 | -------------| ---------- |
 | `Ansible Basics` | ✅ |
+| `IBM V7000 Health Check` | ✅ |
+| `HP MSA Health Check` | ✅ |
+| `Netapp Health Check` | ✅ |
+| `Brocade Health Check` | ✅ |
+| `Cisco Health Check` | ✅ |
+| `K8S cluster creation` | ✍️ |
 ### Storage Health Check Scripts
 This script performs comprehensive health checks on SAN storage systems, ensuring optimal performance and reliability. It includes checks for disk utilization, RAID configuration, connectivity, and more.
 https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check
