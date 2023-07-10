@@ -44,24 +44,30 @@ An Ansible playbook that showcases the basics of using Ansible for infrastructur
 ### Getting Started
 To get started with any of the scripts or projects in this repository, follow these steps:
 
-_1. Clone the repository:_
+_1. Clone the repository_
 ```shell
 git clone https://github.com/prasannaram19591/source-code.git
 ```
-*_2. Navigate to the project directory:_*
+_2. Navigate to the project directory_
 `cd repository-name`
-Follow the instructions in the respective script or project's documentation to set up any dependencies or requirements.
-Execute the script or deploy the project as per your specific use case.
+_3. Follow the instructions in the respective script or project's documentation to set up any dependencies or requirements_
+_4. Execute the script or deploy the project as per your specific use case_
 ## Contributing
 Contributions are always welcome! If you would like to contribute to this repository, please follow these steps:
-Fork the repository.
-Create a new branch for your feature or bug fix:
-`git checkout -b my-feature`
-Make your modifications and commit them with descriptive messages:
-`git commit -m "Add feature or fix bug"`
-Push your changes to the branch:
+_1. Fork the repository_
+_2. Create a new branch for your feature or bug fix_
+```shell
+git checkout -b my-feature
+```
+_3. Make your modifications and commit them with descriptive messages_
+```shell
+git commit -m "Add feature or fix bug"
+```
+_4. Push your changes to the branch_
+```shell
 git push origin my-feature
-Open a pull request detailing your changes.
+```
+_5. Open a pull request detailing your changes_
 ## License
 All the codes are opensourced. Feel free to use and modify the code as per your requirements.
 Happy automating!
