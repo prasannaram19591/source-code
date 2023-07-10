@@ -28,9 +28,10 @@ Feel free to explore the contents of this repository and leverage the automation
 This script performs comprehensive health checks on SAN storage systems, ensuring optimal performance and reliability. It includes checks for disk utilization, RAID configuration, connectivity, and more. Check out 
 [_`Storage Health Check Scripts`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) for the codes.
 ### OpenStack and Ceph Snapshot Backup
-Automates the creation and management of snapshots for OpenStack instances. It integrates with Ceph for efficient and reliable backup and recovery operations.
-https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete
-https://github.com/prasannaram19591/source-code/tree/main/openstack_instance_backup_add_delete_using_ceph_backend
+Automates the creation and management of snapshots for OpenStack instances. It integrates with Ceph for efficient and reliable backup and recovery operations. Checkout the below links for code.
+
+[_`Shell script for openstack backup creation`_](https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete)
+[_`Python script for openstack backup creation and restoration`_](https://github.com/prasannaram19591/source-code/tree/main/openstack_instance_backup_add_delete_using_ceph_backend)
 ### API Creation using Python and FastAPI
  Demonstrates how to create a RESTful API using Python and FastAPI. It includes examples of CRUD (Create, Read, Update, Delete) operations on SAN storage resources.
 https://github.com/prasannaram19591/source-code/tree/main/api
