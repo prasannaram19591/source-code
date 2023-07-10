@@ -11,19 +11,19 @@ Feel free to explore the contents of this repository and leverage the automation
 
 | Project Name | Status
 | -------------| ---------- |
-| [_`Shell script for openstack backup creation`_](https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete) | ✅ |
-| `Ansible Basics` | ✅ |
-| `IBM V7000 Health Check` | ✅ |
-| `HP MSA Health Check` | ✅ |
-| `Netapp Health Check` | ✅ |
-| `Brocade Health Check` | ✅ |
-| `Cisco Health Check` | ✅ |
-| `FIO Benchmarking scripts` | ✅ |
-| `EMC Unity LUN auto provision` | ✅ |
-| `Openstack & Ceph Backup` | ✅ |
-| `VMware vm snapshot` | ✅ |
-| `API creation` | ✅ |
-| `K8S cluster creation` | ✍️ |
+| [_`Shell script Basics`_](https://github.com/prasannaram19591/source-code/tree/main/linux_bash_scripts) | ✅ |
+| [_`Ansible Basics`_](https://github.com/prasannaram19591/source-code/tree/main/linux_test_ansibles) | ✅ |
+| [_`IBM V7000 Health Check`_](https://github.com/prasannaram19591/source-code/tree/main/IBM_V7000_Health_check) | ✅ |
+| [_`HP MSA Health Check`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) | ✅ |
+| [_`Netapp Health Check`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) | ✅ |
+| [_`Brocade Health Check`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) | ✅ |
+| [_`Cisco Health Check`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) | ✅ |
+| [_`FIO Benchmarking scripts`_](https://github.com/prasannaram19591/source-code/tree/main/fio_benchmarking_scripts) | ✅ |
+| [_`EMC Unity LUN auto provision`_](https://github.com/prasannaram19591/source-code/tree/main/EMC_Unity_auto_storage_provisioning) | ✅ |
+| [_`Openstack & Ceph Backup`_](https://github.com/prasannaram19591/source-code/blob/main/openstack_vm_snap_add_purge_revert/openstack_vm_snap_add_purge_revert.py) | ✅ |
+| [_`VMware vm snapshot`_](https://github.com/prasannaram19591/source-code/tree/main/vmware_snapshot_with_esxcli_python) | ✅ |
+| [_`API creation`_](https://github.com/prasannaram19591/source-code/tree/main/api) | ✅ |
+| [_`K8S cluster creation`_](https://github.com/prasannaram19591/source-code/tree/main/minikube) | ✍️ |
 ### Storage Health Check Scripts
 This script performs comprehensive health checks on SAN storage systems, ensuring optimal performance and reliability. It includes checks for disk utilization, RAID configuration, connectivity, and more. Check out 
 [_`Storage Health Check Scripts`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) for the codes.
