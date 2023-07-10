@@ -1,4 +1,4 @@
-# SAN Storage and Automation
+# SAN Storage Backup and Automation
 
 This repository showcases my expertise as a SAN storage and automation expert. It includes various automation scripts and projects that I have contributed to, focusing on storage health checks, OpenStack and Ceph snapshot backups, API creation using Python and FastAPI, Kubernetes cluster creation scripts, and Ansible basics.
 
