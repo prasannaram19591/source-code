@@ -1,8 +1,11 @@
-# SAN Storage Backup and Automation
+# `SAN Storage Backup and Automation`
 
 This repository showcases my expertise as a SAN storage and automation expert. It includes various automation scripts and projects that I have contributed to, focusing on storage health checks, OpenStack and Ceph snapshot backups, API creation using Python and FastAPI, Kubernetes cluster creation scripts, and Ansible basics.
 
 Feel free to explore the contents of this repository and leverage the automation solutions to streamline your storage management and enhance your infrastructure.
+
+## Authors
+ - [Prasanna Ram](https://github.com/prasannaram19591)
 
 ## Scripts and Projects
 ### Storage Health Check Scripts
