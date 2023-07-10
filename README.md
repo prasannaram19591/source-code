@@ -10,11 +10,11 @@ This script performs comprehensive health checks on SAN storage systems, ensurin
 https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check
 ### OpenStack and Ceph Snapshot Backup
 Automates the creation and management of snapshots for OpenStack instances. It integrates with Ceph for efficient and reliable backup and recovery operations.
-[https://github.com/prasannaram19591/source-code/tree/main/ceph-snapshot-for-openstack](https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete)https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete
+https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete
 https://github.com/prasannaram19591/source-code/tree/main/openstack_instance_backup_add_delete_using_ceph_backend
 ### API Creation using Python and FastAPI
  Demonstrates how to create a RESTful API using Python and FastAPI. It includes examples of CRUD (Create, Read, Update, Delete) operations on SAN storage resources.
-[api](https://github.com/prasannaram19591/source-code/tree/main/api)https://github.com/prasannaram19591/source-code/tree/main/api
+https://github.com/prasannaram19591/source-code/tree/main/api
 ### Kubernetes Cluster Creation Scripts
 Shell script that automates the creation of a Kubernetes cluster. It sets up the master node, deploys worker nodes, and configures networking, ensuring a smooth and efficient cluster setup process.
 https://github.com/prasannaram19591/source-code/tree/main/minikube
@@ -24,7 +24,7 @@ https://github.com/prasannaram19591/source-code/tree/main/ansible_samples
 ### Getting Started
 To get started with any of the scripts or projects in this repository, follow these steps:
 Clone the repository:
-git clone [https://github.com/your-username/repository-name.git](https://github.com/prasannaram19591/source-code.git)https://github.com/prasannaram19591/source-code.git
+git clone https://github.com/prasannaram19591/source-code.git
 Navigate to the project directory:
 `cd repository-name`
 Follow the instructions in the respective script or project's documentation to set up any dependencies or requirements.
