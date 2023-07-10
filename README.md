@@ -49,8 +49,11 @@ _1. Clone the repository_
 git clone https://github.com/prasannaram19591/source-code.git
 ```
 _2. Navigate to the project directory_
-`cd repository-name`
+```shell
+cd repository-name
+```
 _3. Follow the instructions in the respective script or project's documentation to set up any dependencies or requirements_
+
 _4. Execute the script or deploy the project as per your specific use case_
 ## Contributing
 Contributions are always welcome! If you would like to contribute to this repository, please follow these steps:
