@@ -11,7 +11,7 @@ Feel free to explore the contents of this repository and leverage the automation
 
 | Project Name | Status
 | -------------| ---------- |
-| `Shell Script Basics` | ✅ | [_`Shell script for openstack backup creation`_](https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete) |
+| [_`Shell script for openstack backup creation`_](https://github.com/prasannaram19591/source-code/tree/main/ceph_openstack_backup_create_and_delete) | ✅ |
 | `Ansible Basics` | ✅ |
 | `IBM V7000 Health Check` | ✅ |
 | `HP MSA Health Check` | ✅ |
