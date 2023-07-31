@@ -5,7 +5,7 @@ This repository showcases my expertise as a SAN storage and automation expert. I
 Feel free to explore the contents of this repository and leverage the automation solutions to streamline your storage management and enhance your infrastructure.
 
 ## Authors
- - [Prasanna Ram](https://github.com/prasannaram19591/source-code/tree/main#readme)
+ - [Prasanna Ram](https://github.com/prasannaram19591/)
 
 ## Scripts and Projects
 
