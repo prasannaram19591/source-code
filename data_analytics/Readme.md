@@ -1,4 +1,4 @@
-# Data Analysis
+# Data Analytics
 
 This project contains python code to convert raw data to presentable charts which can then be used for a quick analysis.
 
