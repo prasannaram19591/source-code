@@ -1,6 +1,6 @@
 # `Storage Backup and Automation`
 
-This repository showcases my expertise as a SAN storage and automation expert. It includes various automation scripts and projects that I have contributed to, focusing on storage health checks, OpenStack and Ceph snapshot backups, API creation using Python and FastAPI, Kubernetes cluster creation scripts, and Ansible basics.
+This repository showcases my expertise as a SAN storage and automation expert. It includes various automation scripts and projects that I have contributed to, focusing on storage health checks, OpenStack and Ceph snapshot backups, API creation using Python and FastAPI, Kubernetes cluster creation scripts, Data Analytics and Ansible basics.
 
 Feel free to explore the contents of this repository and leverage the automation solutions to streamline your storage management and enhance your infrastructure.
 
@@ -24,7 +24,7 @@ Feel free to explore the contents of this repository and leverage the automation
 | [_`VMware vm snapshot`_](https://github.com/prasannaram19591/source-code/tree/main/vmware_snapshot_with_esxcli_python) | ✅ |
 | [_`API creation`_](https://github.com/prasannaram19591/source-code/tree/main/api) | ✅ |
 | [_`Data Analytics`_](https://github.com/prasannaram19591/source-code/tree/main/data_analytics) | ✅ |
-| [_`K8S cluster creation`_](https://github.com/prasannaram19591/source-code/tree/main/minikube) | ✍️ |
+| [_`K8S cluster creation`_](https://github.com/prasannaram19591/source-code/tree/main/minikube) | ✍️ | | [_`K8S cluster creation`_](https://github.com/prasannaram19591/source-code/tree/main/minikube) | ✍️ |
 ### Storage Health Check Scripts
 This script performs comprehensive health checks on SAN storage systems, ensuring optimal performance and reliability. It includes checks for disk utilization, RAID configuration, connectivity, and more. Check out 
 [_`Storage Health Check Scripts`_](https://github.com/prasannaram19591/source-code/tree/main/san_nas_switch_health_check) for the codes.
