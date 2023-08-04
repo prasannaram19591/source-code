@@ -23,6 +23,7 @@ Feel free to explore the contents of this repository and leverage the automation
 | [_`Openstack & Ceph Backup`_](https://github.com/prasannaram19591/source-code/blob/main/openstack_vm_snap_add_purge_revert/openstack_vm_snap_add_purge_revert.py) | ✅ |
 | [_`VMware vm snapshot`_](https://github.com/prasannaram19591/source-code/tree/main/vmware_snapshot_with_esxcli_python) | ✅ |
 | [_`API creation`_](https://github.com/prasannaram19591/source-code/tree/main/api) | ✅ |
+| [_`Data Analytics`_](https://github.com/prasannaram19591/source-code/tree/main/data_analytics) | ✅ |
 | [_`K8S cluster creation`_](https://github.com/prasannaram19591/source-code/tree/main/minikube) | ✍️ |
 ### Storage Health Check Scripts
 This script performs comprehensive health checks on SAN storage systems, ensuring optimal performance and reliability. It includes checks for disk utilization, RAID configuration, connectivity, and more. Check out 
